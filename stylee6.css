@@ -1,0 +1,78 @@
+body{
+	width: 100%;
+	height: 250vh;
+	background: url('https://i.pinimg.com/originals/05/ed/16/05ed16c172eb6445067a286ccbeaf66c.jpg') center no-repeat;
+	background-size: cover;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+section{
+	position: absolute;
+	width: 50%;
+	height: 220%;
+	background-color: #f1f1f1;
+	margin: 100px 375px;
+	border-radius: 10px;
+	box-shadow: 2px 5px 10px 15px #33FF86; 
+}
+section h2{
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+section p{
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #555;
+	text-align: justify;
+	margin: 15px 20px;
+}
+section img{
+	width: 95%;
+	height: 30%;
+	margin: 20px 20px;
+}
+/*.section-2, .section-3, .section-4{
+	display: none;
+}*/
+section button{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	border: none;
+	font-size: 3.5rem;
+	font-weight: bold;
+	color: #2c3e50;
+	cursor: pointer;
+}
+section .btn-1{
+	position: absolute;
+	bottom: 30px;
+	left: 20px;
+	border: none;
+	outline: none;
+}
+section .btn-2{
+	position: absolute;
+	bottom: 30px;
+	right: 20px;
+	border: none;
+	outline: none;
+}
+section .btn{
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	border: none;
+	outline: none;
+	font-size: 3.5rem;
+	font-weight: bold;
+	color: #2c3e50;
+	cursor: pointer;
+	position: absolute;
+	bottom: 40px;
+	right: 20px;	
+}
+/*.section-2{
+	transition: 2s linear;
+}*/

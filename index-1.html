@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Operating Syztem</title>
+	<link rel="stylesheet" type="text/css" href="stylee.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<div class="body">
+	<h1 class="text text-danger">Operating System</h1>		
+	<div class="grid-container">
+		<div class="card" id="onee" style="width: 25rem; height: 12rem;">
+  			<div class="card-body">
+  				<div class="card-img">
+  					<img src="https://img.icons8.com/color/60/000000/ubuntu--v1.png"/>	
+  				</div>
+    			<span>Operating System</span>
+    			<p>Page Replacement Algorithms (Theory)</p>
+    			<div class="line"></div>
+  			</div>
+		</div>
+
+		<div class="card" id="twoo" style="width: 25rem; height: 12rem;">
+  			<div class="card-body">
+  				<div class="card-img">
+  					<img src="https://img.icons8.com/color/60/000000/ubuntu--v1.png"/>	
+  				</div>
+    			<span>Operating System</span>
+    			<p>Page Replacement Algorithms (Practical)</p>
+    			<div class="line"></div>
+  			</div>
+		</div>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		var cc1 = document.getElementById('onee');
+		var cc2 = document.getElementById('twoo');
+
+		cc1.addEventListener('click', function(){
+			window.location = "Theory.html";
+		})
+
+		cc2.addEventListener('click', function(){
+			window.location = "Page-Replacement.html";
+		})
+	</script>
+</body>
+</html>

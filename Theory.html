@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Replacement Algorithm - Theory</title>
+	<link rel="stylesheet" type="text/css" href="stylee2.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">	
+</head>
+<body>
+	<div class="background">
+		<h1 class="text-danger">Page Replacement Algoritm (Theory)</h1>
+		<div class="grid-container">
+			<div class="card" id="one" style="width: 25rem; height: 12rem;">
+  				<div class="card-body">
+  					<div class="card-img">
+  						<img src="https://img.icons8.com/color/60/000000/ubuntu--v1.png"/>	
+  					</div>
+    				<span>Page Replacement Algorithms(Theory)</span>
+    				<p>FIFO</p>
+    				<div class="line"></div>
+  				</div>
+			</div>
+
+			<div class="card" id="two" style="width: 25rem; height: 12rem;">
+  				<div class="card-body">
+  					<div class="card-img">
+  						<img src="https://img.icons8.com/color/60/000000/ubuntu--v1.png"/>	
+  					</div>
+    				<span>Page Replacement Algorithms(Theory)</span>
+    				<p>LRU</p>
+    				<div class="line"></div>
+  				</div>
+			</div>
+
+			<div class="card" id="three" style="width: 25rem; height: 12rem;">
+  				<div class="card-body">
+  					<div class="card-img">
+  						<img src="https://img.icons8.com/color/60/000000/ubuntu--v1.png"/>	
+  					</div>
+    				<span>Page Replacement Algorithms(Theory)</span>
+    				<p>OPTIMAL</p>
+    				<div class="line"></div>
+  				</div>
+			</div>
+
+			<div class="card" id="four" style="width: 25rem; height: 12rem;">
+  				<div class="card-body">
+  					<div class="card-img">
+  						<img src="https://img.icons8.com/color/60/000000/ubuntu--v1.png"/>	
+  					</div>
+    				<span>Page Replacement Algorithms(Theory)</span>
+    				<p>Belady's Anomaly Alogrithm</p>
+    				<div class="line"></div>
+  				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		var c1 = document.getElementById('one');
+		var c2 = document.getElementById('two');
+		var c3 = document.getElementById('three');
+		var c4 = document.getElementById('four');
+
+		c1.addEventListener('click',function(){
+			window.location = "fifo.html";
+		})
+
+		c2.addEventListener('click',function(){
+			window.location = "lru.html";
+		})
+
+		c3.addEventListener('click',function(){
+			window.location = "opt.html";
+		})
+
+		c4.addEventListener('click',function(){
+			window.location = "belady.html";
+		})
+
+	</script>
+</body>
+</html>

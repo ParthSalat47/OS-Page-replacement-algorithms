@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Graph</title>
+</head>
+<body>
+
+    <div id="frame"></div>
+
+    <form action="action.php" method="GET"> 
+          <label for="nFrames" >Number of frames :</label>  
+          <input type="number" id="nFrames" name="frames">
+          <br/>
+
+          <label for="inputs" class="label-1">Order of pages : </label> 
+          <input type="text" id="inputs" name="in" class="input-1">
+          <br/>
+          <br>
+
+        </form>
+
+        <!-- <table width="30%" id=tab border="3px" style="display: none; align-content: center;" class="w3-container w3-center w3-animate-opacity">
+        <tr id="req" style="background-color: #2ecc71;">
+            <td>Requests:</td>        
+          </tr>
+      </table> -->
+
+      <!-- <div class="num" id="nums" style="display: none;">
+        <p class="p1 text-danger" id="faults">Page faults: </p>
+        <p id="faultRat">Page fault Ratio: </p>
+        <p class="text-danger" id="faultrate">Rage fault Rate: </p>
+        <br>
+        <p class="text-success" id="hits">Page Hit: </p>
+        <p class="text-success" id="hitrate">Page Hit Rate: </p>
+      </div> -->
+     
+     <button onclick="sub()">Submit</button>
+    <div id='myDiv'></div>
+
+     <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script type="text/javascript">
+        function sub(){
+          
+          var inputs = document.getElementById("inputs");
+          var arr = inputs.value.split(" "); //split the inputs into an array
+  //number of frames
+          var frames = document.getElementById("nFrames").valueAsNumber;
+          console.log(arr);
+          console.log(frames);
+
+          var temp=[];
+          var list = [];
+          var l = [];
+          var fault=0;
+          var data=[];
+
+          for(var i=1;i<=frames;){
+            
+              for(var k=0;k<arr.length;k++){
+                if(temp.length === 0){
+                  temp.push(arr[k]);
+                  console.log(temp);
+                  list = temp;
+                  console.log(list);
+                  fault++;
+                  console.log(fault);
+                }
+
+                else if((temp.length >= i) && !(temp.includes(arr[k]))){
+                  temp.shift();
+                  temp.push(arr[k]);
+                  list = temp;
+                  console.log(list);
+                  console.log("yo");
+                  fault++;
+                }
+
+                else if(!temp.includes(arr[k])){
+                  temp.push(arr[k]);
+                  fault++;
+                  list = temp;
+                  console.log(list);
+                }
+
+                else if(temp.includes(arr[k])){
+                    list = temp;
+                    console.log(list);
+                }
+
+                list = temp;
+                console.log(fault);
+              }
+
+              l.push(fault);
+              console.log(l);
+              //console.log(j);
+              temp = [];
+              list = [];
+              fault = 0;           
+            
+              i++;
+              console.log(i);
+          }
+          console.log(l);
+
+          var trace1 = {
+              x: [1,2,3,4,5,6,7,8,9],
+              y: l,
+              type: 'bar'
+          };
+
+          var data = [trace1];
+
+          Plotly.newPlot('myDiv',data);
+}
+
+        //fifo algorithm
+// function fifo(){
+
+//   //requests
+//   var inputs = document.getElementById("inputs");
+//   var arr = inputs.value.split(" "); //split the inputs into an array
+//   //number of frames
+//   var frames = document.getElementById("nFrames").valueAsNumber;
+// console.log(arr)
+  
+//   //list to be updated
+//   var list = [];
+
+//   //temp to store each step
+//   var temp = [];
+
+//   //page fault
+//   var fault = 0;
+//   var hit = 0;
+
+//   var table = document.getElementById("tab"); //table in html
+//   table.style.display = "table";
+//   var rowReq = document.getElementById("req"); //request row prebuilt in html
+  
+  
+//   // for loop to put the requests inside the table
+//   for(var i = 0; i < arr.length; i++)
+//   {
+//     var column = rowReq.insertCell(-1);
+//     column.innerHTML = arr[i];
+//   }
+
+//   // for loop to add the frames
+//   for(var i =1; i <= frames; i++)
+//   {
+//     var rowrow = table.insertRow(-1);
+//     rowrow.setAttribute("id", "frame" + i)
+//     var cell1 = rowrow.insertCell(-1);
+//     cell1.innerHTML += "Frame " + (i) + ": ";
+//     cell1.setAttribute("id", "arr" +i);
+
+//     // insert the pages
+//     for(var j=1; j <= arr.length; j++)
+//     {
+//       var rowTemp = document.getElementById("frame" + i);
+//       var column = rowTemp.insertCell(-1);
+//       //column.innerHTML = list[i -1];
+//       column.setAttribute("id", "col" + j)
+
+//       if(temp[i-1] == null)
+//         column.innerHTML = "";
+//     }
+
+//   }
+
+
+//   //algorithm
+//   for(i = 0; i < arr.length; i++)
+//   {
+//     console.log(arr[i])
+//     if(temp.length == 0) //determine if the first page has been inserted
+//     {
+//       temp.push(arr[i]); //first job
+//       list = temp;
+//       console.log(list);
+//       fault++;
+//     }
+
+//     else if((temp.length >= frames) && !(temp.includes(arr[i])))
+//     {
+//       temp.shift();
+//       temp.push(arr[i]);
+//       console.log('yo')
+//       fault++;
+
+//     }
+
+//     else if(!temp.includes(arr[i]))
+//     {
+//       fault++;
+//       temp.push(arr[i]);
+//       list = temp;
+//     }
+
+//     else if(temp.includes(arr[i]))
+//     {
+//       list=temp;
+//       hit++;
+//     }
+
+//     console.log(list);
+
+//     list = temp;
+//     for(j = 1; j < list.length + 1; j++)
+//     {
+//       table.rows[j].cells[i+1].innerHTML = list[j-1];
+//     }
+//   }
+
+//   // var ratio = fault / frames;
+//   var rate = (fault / arr.length)*100;
+//   var rate1 = (hit / arr.length)*100;
+
+//   console.log(fault);
+//   console.log(hit);
+
+//   document.getElementById("frame").innerHTML += frames;
+//   document.getElementById("reference").innerHTML += arr;
+//   document.getElementById("algo").innerHTML += " First in first out (FIFO)";
+  
+//   document.getElementById("faults").innerHTML += fault;
+//   // document.getElementById("faultRat").innerHTML += ratio.toFixed(2);
+//   document.getElementById("faultrate").innerHTML += rate.toFixed(2) + "" + "%";
+//   document.getElementById("hits").innerHTML += hit;
+//   document.getElementById("hitrate").innerHTML += rate1.toFixed(2) + "" + "%";
+  
+//   document.getElementById("nums1").style.display = "block";
+//   document.getElementById("nums").style.display = "block";
+  
+//   // document.getElementById("fifoText").style.display = "block";
+//   // document.getElementById("reload").style.display = "block";
+//   // document.getElementById("credit").style.display = "block";
+// }
+
+  </script>
+</body>
+</html>

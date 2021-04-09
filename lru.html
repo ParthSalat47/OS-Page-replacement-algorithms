@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Least Recently Used(LRU)</title>
+	<link rel="stylesheet" type="text/css" href="stylee4.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<div class="contain">
+		<h2>Least Recently Used (LRU)</h2>
+			<p><span>>></span> In this algorithm page will be replaced which is least recently used.</p>
+			<br>
+			<br>
+			<p class="text-dark"><span>>></span> Example : Consider the page reference string 7, 0, 1, 2, 0, 3, 0, 4, 2, 3, 0, 3, 2 with 4 page frames.Find number of page faults.</p>
+			<img src="https://media.geeksforgeeks.org/wp-content/uploads/20190412161533/optimal2.png">
+			<p><span>>></span> Initially all slots are empty, so when 7 0 1 2 are allocated to the empty slots —> 4 Page faults.</p>
+			<p><span>>></span> 0 is already their so —> 0 Page fault.</p>
+			<p><span>>></span> when 3 came it will take the place of 7 because it is least recently used —>1 Page fault.</p>
+			<p><span>>></span> 4 will takes place of 1 —> 1 Page Fault.</p>
+			<p><span>>></span> Now for the further page reference string —> 0 Page fault because they are already available in the memory.</p>
+	</div>
+</body>
+</html>

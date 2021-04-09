@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First-In-First-Out(FIFO)</title>
+	<link rel="stylesheet" type="text/css" href="stylee3.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<div class="contain">
+		<h2>First In First Out (FIFO)</h2>
+			<p><span>>></span> This is the simplest page replacement algorithm. In this algorithm, the operating system keeps track of all pages in the memory in a queue, the oldest page is in the front of the queue.</p>
+			<p><span>>></span> When a page needs to be replaced page in the front of the queue is selected for removal.</p>	
+			<br>
+			<br>
+			<p class="text-dark"><span>>></span> Example : Consider page reference string 1, 3, 0, 3, 5, 6 with 3 page frames. Find number of page faults.</p>
+			<img src="https://media.geeksforgeeks.org/wp-content/uploads/20190412160604/fifo2.png">
+			<p><span>>></span> Initially all slots are empty, so when 1, 3, 0 came they are allocated to the empty slots —> 3 Page Faults.</p>
+			<p><span>>></span> when 3 comes, it is already in  memory so —> 0 Page Faults.</p>
+			<p><span>>></span> Then 5 comes, it is not available in  memory so it replaces the oldest page slot i.e 1. —>1 Page Fault.</p>
+			<p><span>>></span> 6 comes, it is also not available in memory so it replaces the oldest page slot i.e 3 —>1 Page Fault.</p>
+			<p><span>>></span> Finally when 3 come it is not avilable so it replaces 0 1 page fault.</p>
+	</div>
+</body>
+</html>

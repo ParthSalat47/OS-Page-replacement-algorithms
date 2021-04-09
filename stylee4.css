@@ -1,0 +1,34 @@
+body{
+	width: 100%;
+	height: 250vh;
+	background: url('https://i.pinimg.com/originals/05/ed/16/05ed16c172eb6445067a286ccbeaf66c.jpg') center no-repeat;
+	background-size: cover;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+.contain{
+	position: absolute;
+	width: 50%;
+	height: 170%;
+	background-color: #f1f1f1;
+	margin: 100px 375px;
+	border-radius: 10px;
+	box-shadow: 2px 5px 10px 15px #33FF86; 
+}
+.contain h2{
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+.contain p{
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #555;
+	text-align: justify;
+	margin: 15px 20px;
+}
+.contain img{
+	width: 90%;
+	height: 30%;
+	margin: 20px 70px;
+}

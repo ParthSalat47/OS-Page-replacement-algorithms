@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belady's Anomaly Algorithm</title>
+	<link rel="stylesheet" type="text/css" href="stylee6.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<section id="section-1" class="section-1">
+		<br>
+		<p class="text-dark"><span>>></span> Example : For FIFO Page Replacement Algorithm, Consider the reference string 0, 1, 2, 3, 0, 1, 4, 0, 1, 2, 3, 4.</p><br>
+		<p class="font-weight-bold">Case-1 : When frame size = 3<br><br>
+			<img src="https://www.gatevidyalay.com/wp-content/uploads/2018/11/Beladys-Anomaly-FIFO-Page-Replacement-Algorithm-Case-1.png">
+			<p class="text-center">Number of page faults = 9</p>
+		</p>
+		<br>
+		<p class="font-weight-bold">Case-2 :  When frame size = 4<br><br>
+			<img src="https://www.gatevidyalay.com/wp-content/uploads/2018/11/Beladys-Anomaly-FIFO-Page-Replacement-Algorithm-Case-2.png">
+			<p class="text-center">Number of page faults = 10</p>
+		</p>
+		<br>
+		<p><span class="text-dark">From here, we can observe :</span><br><br>
+			<span>=> At stage-7 and stage-8 in case-2, main memory does not contain the set of pages that are present in the corresponding stages in case-1.</span><br>
+			<span>=> Thus, FIFO page replacement algorithm does not follow the stack property.</span><br>
+			<span>=> Hence, it suffers from Belady’s Anomaly.</span><br>
+			<span>=> As a proof, number of page faults increase when the number of frames is increased from 3 to 4.</span>
+		</p><br><br>
+
+		<p><span class="text-danger font-weight-bold">>>Note:</span> In the above example,FIFO Page Replacement Algorithm suffers from Belady’s Anomaly.<br>
+			<span>It would be wrong to say that “FIFO Page Replacement Algorithm always suffer from Belady’s Anomaly”.</span>
+		</p>
+		<button id="btn" class="btn-1" onclick="btnn()"><</button>
+		<button id="btn" class="btn-2" onclick="btnn6()">></button>
+	</section>
+
+	<section id="section-2" class="section-2">
+		<br>
+		<p class="text-dark"><span>>></span> Example : For LRU Page Replacement Algorithm, Consider the reference string 0, 1, 2, 3, 0, 1, 4, 0, 1, 2, 3, 4.</p><br>
+		<p class="font-weight-bold">Case-1 : When frame size = 3<br><br>
+			<img src="https://www.gatevidyalay.com/wp-content/uploads/2018/11/Beladys-Anomaly-LRU-Page-Replacement-Algorithm-Case-1.png">
+			<p class="text-center">Number of page faults = 10</p>
+		</p>
+		<br>
+		<p class="font-weight-bold">Case-2 :  When frame size = 4<br><br>
+			<img src="https://www.gatevidyalay.com/wp-content/uploads/2018/11/Beladys-Anomaly-LRU-Page-Replacement-Algorithm-Case-2.png">
+			<p class="text-center">Number of page faults = 8</p>
+		</p>
+		<br>
+		<p><span class="text-dark">From here, we can observe :</span><br><br>
+			<span>=> At all the stages in case-2, main memory compulsorily contains the set of pages that are present in the corresponding stages in case-1.</span><br>
+			<span>=> Thus, LRU page replacement algorithm follows the stack property.</span><br>
+			<span>=> Hence, it does not suffer from Belady’s Anomaly.</span><br>
+			<span>=> As a proof, number of page faults decrease when the number of frames is increased from 3 to 4.</span>
+		</p><br><br>
+
+		<p><span>>></span> So, from this above example you understood that LRU Page Replacement Algorithm doesn't suffer Belady's Anomaly Algorithm.</p>
+		<button id="btn-1" class="btn-1" onclick="btnn1()"><</button>
+		<button id="btn-2" class="btn-2" onclick="btnn2()">></button>
+	</section>
+
+	<section id="section-3" class="section-3">
+		<br>
+		<p class="text-dark"><span>>></span> Example : For Optimal Page Replacement Algorithm, Consider the reference string 0, 1, 2, 3, 0, 1, 4, 0, 1, 2, 3, 4.</p><br>
+		<p class="font-weight-bold">Case-1 : When frame size = 3<br><br>
+			<img src="https://www.gatevidyalay.com/wp-content/uploads/2018/11/Beladys-Anomaly-Optimal-Page-Replacement-Algorithm-Case-1.png" class="img-1">
+			<p class="text-center">Number of page faults = 7</p>
+		</p>
+		<br>
+		<p class="font-weight-bold">Case-2 :  When frame size = 4<br><br>
+			<img src="https://www.gatevidyalay.com/wp-content/uploads/2018/11/Beladys-Anomaly-Optimal-Page-Replacement-Algorithm-Case-2.png" class="img-1">
+			<p class="text-center">Number of page faults = 6</p>
+		</p>
+		<br>
+		<p><span class="text-dark">From here, we can observe :</span><br><br>
+			<span>=> At all the stages in case-2, main memory compulsorily contains the set of pages that are present in the corresponding stages in case-1.</span><br>
+			<span>=> Thus, optimal page replacement algorithm follows the stack property.</span><br>
+			<span>=> Hence, it does not suffer from Belady’s Anomaly.</span><br>
+			<span>=> As a proof, number of page faults decrease when the number of frames is increased from 3 to 4.</span>
+		</p><br><br>
+
+		<p><span>>></span> So, from this above example you understood that Optimal Page Replacement Algorithm doesn't suffer Belady's Anomaly Algorithm.</p>
+		<button id="btn-3" class="btn-1" onclick="btnn3()"><</button>
+		<button id="btn-4" class="btn-2" onclick="btnn4()">></button>
+	</section>
+
+	<section id="section-4" class="section-4">
+		<h2>Belady's Anomaly Algorithm</h2>
+			<p><span>>></span> Belady’s Anomaly is the phenomenon of increasing the number of page faults on increasing the number of frames in main memory.</p>
+			<br>
+			<br>
+			<p class="text-danger"><span>>></span> Reason Behind Belady’s Anomaly :<br><br>
+				<span class="text-dark">=> An algorithm suffers from Belady’s Anomaly if and only if it does not follow stack property.</span><br>
+				<span class="text-dark">=> Algorithms that follow stack property are called as stack based algorithms.</span><br>
+				<span class="text-dark">=> Stack based algorithms do not suffer from Belady’s Anomaly.</span><br>
+				<span class="text-dark">=> This is because these algorithms assign priority to a page for replacement that is independent of the number of frames in the main memory.</span>
+			</p><br><br>
+
+			<p><span>>></span> LRU Page Replacement Algorithm and Optimal Page Replacement Algorithm are stack based algorithms. Hence, they do not suffer from Belady’s Anomaly.</p><br><br>
+			
+			<p class="text-danger"><span>>></span> Stack Property :<br><br>
+				<span class="text-dark">=> Consider - Initially, we had ‘m’ number of frames in the main memory.</span>
+				<span class="text-dark">=> Now, the number of frames in the main memory is increased to ‘m+1’.</span>
+				<span class="text-dark">=> According to stack property, At each stage, the set of pages that were present in the main memory when number of frames is ‘m’ will be compulsorily present in the corresponding stages in main memory when the number of frames is increased to ‘m+1’.</span>
+			</p>
+			<button id="btn-5" class="btn-2" onclick="btnn5()">></button>
+	</section>	
+
+	<script type="text/javascript">
+		var section1 = document.getElementById('section-1');
+		var section2 = document.getElementById('section-2');
+		var section3 = document.getElementById('section-3');
+		var section4 = document.getElementById('section-4');
+		
+		var btn1 = document.getElementById('btn-1');
+		var btn2 = document.getElementById('btn-2');
+		var btn3 = document.getElementById('btn-3');
+		var btn4 = document.getElementById('btn-4');
+		var btn5 = document.getElementById('btn-5');
+		var btn6 = document.getElementById('btn-6');
+
+		function btnn6(){
+			section1.style.display = "none";
+			section4.style.display = "block";
+		}
+		function btnn5(){
+			section4.style.display = "none";
+			section3.style.display = "block";
+		}
+		function btnn4(){
+			section3.style.display = "none";
+			section2.style.display = "block";	
+		}
+		function btnn3(){
+			section4.style.display = "block";
+		}
+		function btnn2(){
+			section2.style.display = "none";
+			section1.style.display = "block";
+		}
+		function btnn1(){
+			section3.style.display = "block";
+		}
+		function btnn(){
+			section2.style.display = "block";
+		}
+	</script>
+</body>
+</html>

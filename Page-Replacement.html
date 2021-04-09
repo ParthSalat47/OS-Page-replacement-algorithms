@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Replacement Algorithm</title>
+	<link rel="stylesheet" type="text/css" href="stylee1.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<div class="background">
+		<div class="body">
+			<div class="body-title">
+				<h2>Page Replacement Algorithm</h2>
+			</div>
+
+			<div class="center">
+				<span>Algorithm :</span>
+				<select class="select" id="select">
+					<option></option>
+					<option value="First in first Out (FIFO)">First in first Out (FIFO)</option>
+					<option value="Least Recently Used (LRU)">Least Recently Used (LRU)</option>
+					<option value="Optimal (OPT)">Optimal (OPT)</option>
+				</select>	
+
+				<form action="action.php" method="GET">	
+					<label for="nFrames" >Number of frames :</label>	
+					<input type="number" id="nFrames" name="frames">
+					<br/>
+
+					<label for="inputs" class="label-1">Order of pages : </label>	
+					<input type="text" id="inputs" name="in" class="input-1">
+					<br/>
+					<br>
+
+				</form>
+			</div>
+
+			<div class="abc">
+					<button class="btn" value="Submit" onClick=submit()>Submit</button>
+			</div>
+			<button class="btn1" value="Reset" id="reset" onClick=reset()>Reset</button>
+		</div>
+
+		<div id="box" class="box">
+				<span class="s1"></span>
+				<span class="s2"></span>
+				<span class="s3"></span>
+		</div>
+
+		<div class="body1" id="body1">
+			<div class="body-title1">
+				<h2>Output</h2>
+			</div>
+
+			<span id="span">Output generated over here...</span>
+
+			<div class="num1" id="nums1" style="display: none;">
+				<p id="frame">Number of frames : </p>
+				<p id="reference">Order of pages : </p>
+				<p id="algo">Algorithm :</p>
+			</div>
+			<br>
+			<table width="30%" id=tab border="3px" style="display: none; align-content: center;" class="w3-container w3-center w3-animate-opacity">
+				<tr id="req" style="background-color: #2ecc71;">
+		    		<td>Requests:</td>		    
+	  			</tr>
+			</table>
+		
+			<div class="num" id="nums" style="display: none;">
+				<p class="p1 text-danger" id="faults">Page faults: </p>
+				<!-- <p id="faultRat">Page fault Ratio: </p> -->
+				<p class="text-danger" id="faultrate">Rage fault Rate: </p>
+				<br>
+				<p class="text-success" id="hits">Page Hit: </p>
+				<p class="text-success" id="hitrate">Page Hit Rate: </p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="script1.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
